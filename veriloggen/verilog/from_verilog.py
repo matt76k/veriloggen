@@ -88,7 +88,7 @@ def to_ast(*filelist, **opt):
 
     code_parser = VerilogCodeParser(filelist,
                                     preprocess_include=include,
-                                    preprocess_define=define)
+                                    preprocess_define=define, **opt)
     ast = code_parser.parse()
 
     return ast
